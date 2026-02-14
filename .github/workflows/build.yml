@@ -39,7 +39,7 @@ jobs:
         run: |
           xcodebuild build \
             -scheme Nostur \
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.2' \
+            -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=18.5' \
             -clonedSourcePackagesDirPath .spm-cache \
             CODE_SIGNING_ALLOWED=NO
 
@@ -47,7 +47,7 @@ jobs:
         run: |
           xcodebuild test \
             -scheme Nostur \
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.2' \
+            -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=18.5' \
             -clonedSourcePackagesDirPath .spm-cache \
             -resultBundlePath TestResults \
             CODE_SIGNING_ALLOWED=NO
