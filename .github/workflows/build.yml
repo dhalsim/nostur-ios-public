@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14
+    runs-on: macos-15
     timeout-minutes: 30
 
     steps:
@@ -39,7 +39,7 @@ jobs:
         run: |
           xcodebuild build \
             -scheme Nostur \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.2' \
             -clonedSourcePackagesDirPath .spm-cache \
             CODE_SIGNING_ALLOWED=NO
 
@@ -47,7 +47,7 @@ jobs:
         run: |
           xcodebuild test \
             -scheme Nostur \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.2' \
             -clonedSourcePackagesDirPath .spm-cache \
             -resultBundlePath TestResults \
             CODE_SIGNING_ALLOWED=NO
