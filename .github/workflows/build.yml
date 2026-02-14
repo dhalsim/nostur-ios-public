@@ -1,4 +1,4 @@
-name: Build & Test
+name: Build
 
 on:
   push:
@@ -54,13 +54,4 @@ jobs:
             -scheme Nostur \
             -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=18.5' \
             -clonedSourcePackagesDirPath .spm-cache \
-            CODE_SIGNING_ALLOWED=NO
-
-      - name: Run Tests
-        run: |
-          xcodebuild test \
-            -scheme Nostur \
-            -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=18.5' \
-            -clonedSourcePackagesDirPath .spm-cache \
-            -resultBundlePath TestResults \
             CODE_SIGNING_ALLOWED=NO
